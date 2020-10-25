@@ -47,6 +47,7 @@ def startGame():
 			else:
 				position = position - 1
 		except:
+			displayBoard()
 			print("Please choose position from 1 to 9")
 			continue
 		#Placing current player to the entered position
@@ -56,7 +57,6 @@ def startGame():
 		check_for_winner()
 		flip_player()
 		
-
 
 
 #Fliping the player from x to o
@@ -204,7 +204,6 @@ def gameMessage():
         print()
 
 def main():
-	gameMessage()
 	startGame() #Calling the start game function
 
 if __name__ == '__main__':
