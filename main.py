@@ -200,7 +200,7 @@ def check_diagonal_winner():
 
 
 def gameMessage():
-        print("=====> Tic Tac Toe Game (X and 0) Players <=====\n")
+        print("=====> Tic Tac Toe Game (X and O) Players <=====\n")
         print()
 
 def main():
