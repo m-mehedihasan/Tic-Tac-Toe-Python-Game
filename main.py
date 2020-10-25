@@ -27,7 +27,11 @@ def displayBoard():
 
 
 
+
 def startGame():
+	#Clearing screen
+	clearScreen()
+	gameMessage()
 	#displaying initial board
 	displayBoard()
 
@@ -48,6 +52,7 @@ def startGame():
 		#Placing current player to the entered position
 		board[position] = "_" + current_player + "__"
 		displayBoard()
+		check_if_tie_occure()
 		check_for_winner()
 		flip_player()
 		
@@ -82,8 +87,6 @@ def clearScreen():
 
 #Winner Checking function
 def check_for_winner():
-	#Checking tie 
-	check_if_tie_occure()
 
 	row_winner 		= check_row_winner()
 	column_winner 	= check_column_winner()
@@ -120,7 +123,6 @@ def check_for_winner():
 					print("\n|> Congratulations! O has won. <|")
 
 		#End of game_is_over IF
-
 
 
 def check_if_tie_occure():
@@ -197,10 +199,9 @@ def check_diagonal_winner():
 		return board[6]
 
 
-
 def gameMessage():
-	print("=====> Tic Tac Toe Game (X and 0) Players <=====\n")
-	print()
+        print("=====> Tic Tac Toe Game (X and 0) Players <=====\n")
+        print()
 
 def main():
 	gameMessage()
